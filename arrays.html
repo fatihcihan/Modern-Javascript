@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+
+        const numbers = [1, 5, 6, 3, 2, 11, 13, 6]
+        const products = [
+            { productName: "Iphone 11", price: 12000 },
+            { productName: "Iphone 12", price: 15000 },
+            { productName: "Iphone 13", price: 18000 },
+            { productName: "Iphone 13 Pro", price: 22000 },
+        ]
+
+        // const oddNumbers = [];
+        // for (let number of numbers) {
+        //     if (number % 2 == 1) {
+        //         oddNumbers.push(number)
+        //     }
+        // }
+        // console.log(oddNumbers);
+
+        // const checkOddNumbers = (number) => number % 2 == 1;
+        // const oddNumbers = numbers.filter(checkOddNumbers);
+        // console.log(oddNumbers);
+
+        // oddNumbers = numbers.filter((number) => number % 2 == 1);      // [1, 5, 3, 11, 13]
+        // oddNumbers = numbers.map((number) => number % 2 == 1);         // true, true, false...
+
+        // const result = products.map(product => product)                // all product list
+
+        // const filteredProducts = products.filter(product => product.price > 16000)
+        // result = filteredProducts.map(product => product.productName);
+
+        // const result = products.filter(product => product.price >= 15000).map(product => product.productName);
+
+        // const result = products.find(product => product.price > 12000);     // returns the first value found (Iphone 12)
+        const result = products.findIndex(product => product.price > 15000);     // if interested in index (2. index)
+
+        console.log(result);
+
+
+    </script>
+</body>
+
+</html>
