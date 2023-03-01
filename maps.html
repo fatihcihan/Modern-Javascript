@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+
+        const students = new Map();     // map -> works as key value
+
+        let user = { username: 'fatihcihan' }
+
+        students.set(1, 'fatih')
+        students.set(2, 'onur')
+        students.set(3, 'ekrem')
+        students.set(4, 'okan')
+        students.set(true, 'dogan')
+        students.set(user,'fatih cihan');
+
+        console.log(students.get(user));
+
+        // console.log(students.get(2));             // onur
+        // console.log(students.get(true));         // dogan
+
+        let result;
+
+        result = students.size;                   // 5
+        result = students.has('1');               // false
+        result = students.has(1);                 // true
+        // students.delete(1);
+        result = students.size;                 // 4
+        // console.log(students.get(1));           // undefined
+        // students.clear();                    // deletes all elements
+
+        // for (let student of students.keys()) {        // returns all keys
+        //     console.log(student);
+        // }
+
+        // for (let student of students.values()) {      // returns all values
+        //     console.log(student);
+        // }
+
+
+        // for (let student of students.entries()) {     // returns all key-value (each element in the list comes as an array)
+        //     // console.log(student[0]);                //  returns key information
+        //     console.log(student[1]);                  //  returns value information
+        // }
+
+        for (let [key, value] of students.entries()) {
+            console.log(key, value);                    // returns key-value
+        }
+
+
+        // console.log(students);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
