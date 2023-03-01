@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+        // ES5
+
+        // function greeting() {
+        //     console.log('hey');
+        // }
+
+        var greetingES5 = function greeting(name) {
+            console.log('hey ' + name);
+        }
+        greetingES5('fatih');
+
+        // ES6 - Arrow function
+
+        const greetingES6 = (name) => { console.log('Greeting with arrow function ' + name); }
+        greetingES6('fatih');
+
+
+        // ES5
+
+        var totalES5 = function (a, b) {
+            return a + b;
+        }
+
+        var result = totalES5(10, 20);
+        console.log(result);
+
+        // ES6 
+        // const totalES6 = (a, b) => a + b;       // a + b value is returned directly
+        const totalES6 = (a, b) => { return a + b }
+        
+        result = totalES6(20, 40);
+        console.log(result);
+
+    </script>
+</body>
+
+</html>
