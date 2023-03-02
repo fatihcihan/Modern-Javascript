@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        // class
+        class Person {
+            constructor(name, job, birthday) {
+                this.name = name;
+                this.job = job;
+                this.birthday = birthday;
+            }
+
+            calculateAge() {
+                let date = new Date().getFullYear();
+                return date - this.birthday;
+            }
+
+            get name() {
+                return this._name;
+            }
+
+            set name(value) {
+                if (value.length < 3) {
+                    console.log('too few characters for name');
+                    return;
+                }
+                this._name = value;
+            }
+
+            get birthday() {
+                return this._birthday;
+            }
+
+            set birthday(value) {
+                if (value < 1900 || value > new Date().getFullYear()) {
+                    console.log('date information is wrong');
+                    return;
+                }
+                this._birthday = value;
+            }
+        }
+
+        let person1 = new Person('fa', 'developer', 1899);
+        console.log(person1);
+        console.log(person1.name);
+
+
+
+    </script>
+</body>
+
+</html>
