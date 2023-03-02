@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // function constructor
+
+        function PersonES5(name, job, birthday) {
+            this.name = name;
+            this.job = job;
+            this.birthday = birthday;
+            // this.calculateAge = function () {
+            //     let date = new Date().getFullYear();
+            //     return date - birthday;
+            // }
+        }
+
+        PersonES5.prototype.calculateAge = function () {
+            let date = new Date().getFullYear();
+            return date - this.birthday;
+        }
+
+        let fatih = new PersonES5('fatih cihan', 'developer', 1993);
+        let onur = new PersonES5('onur senelli', 'lawyer', 1990);
+        let okan = new PersonES5('okan bozok', 'developer', 1994);
+        let ekrem = new PersonES5('ekrem uysal', 'developer', 1992);
+
+        console.log(fatih.calculateAge());
+        console.log(onur.calculateAge());
+
+
+        // class
+        class PersonES6 {
+            constructor(name, job, birthday) {
+                this.name = name;
+                this.job = job;
+                this.birthday = birthday;
+                console.log('Created object');
+            }
+
+            calculateAge() {
+                let date = new Date().getFullYear();
+                return date - this.birthday;
+            }
+        }
+
+        let person1 = new PersonES6('emre yilmaz', 'student', 2000);
+        let person2 = new PersonES6('huseyin kara', 'teacher', 1988);
+        console.log(person1.calculateAge());
+        console.log(person2.calculateAge());
+
+    </script>
+</body>
+
+</html>
